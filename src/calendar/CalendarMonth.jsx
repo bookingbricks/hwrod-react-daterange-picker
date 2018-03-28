@@ -28,8 +28,8 @@ const CalendarMonth = createClass({
     onYearChange: PropTypes.func,
     value: CustomPropTypes.momentOrMomentRange,
     locale: PropTypes.string,
-    showWeekNumber: React.PropTypes.bool,
-    weekNumberLabel: React.PropTypes.string,
+    showWeekNumber: PropTypes.bool,
+    weekNumberLabel: PropTypes.string,
   },
 
   setLocale(locale) {

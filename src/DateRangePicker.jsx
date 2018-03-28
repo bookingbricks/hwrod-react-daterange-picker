@@ -60,8 +60,8 @@ const DateRangePicker = createClass({
     showLegend: PropTypes.bool,
     stateDefinitions: PropTypes.object,
     value: CustomPropTypes.momentOrMomentRange,
-    showWeekNumber: React.PropTypes.bool,
-    weekNumberLabel: React.PropTypes.string,
+    showWeekNumber: PropTypes.bool,
+    weekNumberLabel: PropTypes.string,
   },
 
   getDefaultProps() {
