@@ -54,6 +54,10 @@ const webpackConfig = {
         exclude: /node_modules\//,
         loader: 'babel',
       },
+      {
+        test: /\.json$/,
+        loaders: ['json'],
+      },
     ],
     postLoaders: [
       {
@@ -62,7 +66,7 @@ const webpackConfig = {
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx', '.json'],
   },
   plugins: gulpPlugins,
 };
@@ -96,6 +100,7 @@ gulp.task('test-coverage', ['lint'], function (done) {
         ],
         loaders: [
           {test: /\.(js|jsx)$/, exclude: /node_modules/, loader: require.resolve('babel-loader')},
+          {test: /\.json$/, loaders: ['json']},
         ],
       },
       resolve: {

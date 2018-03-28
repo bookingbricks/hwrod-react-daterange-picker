@@ -4,7 +4,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import createClass from 'create-react-class';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import {} from 'moment-range';
 var fs = require('fs');
 import timekeeper from 'timekeeper';
@@ -17,6 +17,8 @@ import CodeSnippet from './components/code-snippet';
 import Install from './components/install';
 import Features from './components/features';
 import QuickSelection from './components/quick-selection';
+
+moment.tz.setDefault('Europe/Stockholm');
 
 const today = moment();
 // freeze date to April 1st
