@@ -221,6 +221,10 @@ const CalendarDate = createClass({
       }
     }
 
+    if (this.props.showWeekNumber) {
+      cellStyle.width = '12.5%';
+    }
+
     return (
       <td className={this.cx({element: 'Date', modifiers: bemModifiers, states: bemStates})}
         style={cellStyle}
